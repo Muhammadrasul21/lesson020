@@ -1,9 +1,6 @@
 const wrapper = document.querySelector(".wrapper");
-
 const API_LINK = "https://jsonplaceholder.typicode.com/posts";
-
 getData(API_LINK, createPostCard);
-
 async function getData(api, callback) {
     try {
         const response = await fetch(api);
@@ -13,7 +10,6 @@ async function getData(api, callback) {
         console.log(err);
     }
 }
-
 function createPostCard(data) {
     data.forEach(post => {
         let div = document.createElement("div");

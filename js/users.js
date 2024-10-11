@@ -1,9 +1,6 @@
 const wrapper = document.querySelector(".wrapper");
-
 const API_USERS = "https://jsonplaceholder.typicode.com/users";
-
 getData(API_USERS, createUserCard);
-
 async function getData(api, callback) {
     try {
         const response = await fetch(api);
@@ -13,7 +10,6 @@ async function getData(api, callback) {
         console.log(err);
     }
 }
-
 function createUserCard(data) {
     data.forEach(user => {
         let div = document.createElement("div");

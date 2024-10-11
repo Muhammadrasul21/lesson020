@@ -1,8 +1,5 @@
 const wrapper = document.querySelector(".wrapper");
-
-
 const API_ALBUMS = "https://jsonplaceholder.typicode.com/albums";
-
 getData(API_ALBUMS, createAlbumCard);
 
 async function getData(api, callback) {
@@ -14,7 +11,6 @@ async function getData(api, callback) {
         console.log(err);
     }
 }
-
 function createAlbumCard(data) {
     data.forEach(album => {
         let div = document.createElement("div");
